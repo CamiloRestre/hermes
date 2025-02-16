@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurar Contraseña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Restaurar Contraseña</h2>
+        <p>Escribe dos veces una nueva contraseña</p>
+        <input type="password" id="nuevaContrasena" placeholder="Nueva Contraseña" required>
+        <input type="password" id="repiteContrasena" placeholder="Repite la Contraseña" required>
+        <button class="submit-button" onclick="validarContrasena()">Restaurar</button>
+    </div>
+    <script src="script.js" defer></script>
+    <script>
+        function validarContrasena() {
+            const nuevaContrasena = document.getElementById('nuevaContrasena').value;
+            const repiteContrasena = document.getElementById('repiteContrasena').value;
+
+            if (!nuevaContrasena || !repiteContrasena) {
+                alert('Por favor, completa ambos campos de contraseña.');
+            } else if (nuevaContrasena !== repiteContrasena) {
+                alert('Las contraseñas no coinciden.');
+            } else {
+
+                alert('Contraseña restaurada con éxito.');
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

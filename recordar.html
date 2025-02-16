@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordar Contraseña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recordar Contraseña</h1>
+        <p>No hay de que preocuparse, deja tu correo electrónico para enviarte un link para restaurarla. </p>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="Digite su correo electrónico registrado" required>
+        <button class="submit-button" onclick="validarEmail()">Enviar Enlace</button>
+    </div>
+    <script src="script.js" defer></script>
+    <script>
+        function validarEmail() {
+            const email = document.getElementById('email').value;
+            if (!email) {
+                alert('Por favor, ingresa tu correo electrónico.');
+            } else {
+
+                window.location.href = "enlace.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

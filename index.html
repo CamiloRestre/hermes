@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white">
+    <div class="flex">
+        <div class="w-64 bg-gray-100 h-screen p-4">
+            <h1 class="text-lg font-bold">
+                Hermes
+                <a href="login.html" class="text-red-500 ml-2" title="Salir">
+                    <i class="fas fa-times"></i>
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li class="mb-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-home mr-2"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a onclick="toggleMenu()" class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded cursor-pointer">
+                            <i class="fas fa-users mr-2"></i>Usuarios<i class="fas fa-chevron-down ml-auto"></i>
+                        </a>
+                        <ul id="usuarios-submenu" class="ml-6 mt-2 hidden">
+                            <li class="mb-2">
+                                <a onclick="showUsuarios()" class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded cursor-pointer">
+                                    <i class="fas fa-user mr-2"></i>Usuarios
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a onclick="showPermisos()" class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded cursor-pointer">
+                                    <i class="fas fa-lock mr-2"></i>Permisos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-check-circle mr-2"></i>Autorizar
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-undo mr-2"></i>Devoluciones
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-sign-out-alt mr-2"></i>Salidas
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a class="flex items-center p-2 text-gray-700 hover:bg-gray-200 rounded" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>Reportes
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div id="main-content" class="flex-1 p-6">
+            <h1 class="text-2xl font-bold">INICIO</h1>
+        </div>
+    </div>
+</body>
+
+</html>
